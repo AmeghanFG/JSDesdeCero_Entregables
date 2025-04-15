@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de constraseñas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="contenedorGenerador">
+        <h1>Password Generator</h1>
+        <!--Contenedor de la contraseña generada-->
+        <div id="contrasenaGenerada">
+            <p id="password"></p>
+            <button id="btn_copiarContrasena"><img src="Image/copiar-simbolo.png" alt="Copiar la contraseña al portapapeles"></button>
+        </div>
+        <!--Contenedor de los parametros de la contraseña-->
+        <div id="parametrosContrasena">
+            <form action="" id="formParametros">
+                <label for="cantidadCaracteres">Character Lenght</label>
+                <p id="valorRango"> No. carácteres</p>
+                <input type="range" id="cantidadCaracteres" min="3" max="20">
+
+                <label class="checkbox-container">
+                    <input type="checkbox" id="minusculas" class="chk">
+                    Include Lowercase Letters
+                </label>
+                
+                <label class="checkbox-container">
+                    <input type="checkbox" id="mayusculas" class="chk">
+                    Include Uppercase Letters
+                </label>
+                
+                <label class="checkbox-container">
+                    <input type="checkbox" id="numeros" class="chk">
+                    Include Numbers
+                </label>
+                
+                <label class="checkbox-container">
+                    <input type="checkbox" id="simbolos" class="chk">
+                    Include Symbols
+                </label>
+            </form>
+
+            <div id="dificultad">
+                <p>Strength</p>
+                <p id="level">MEDIUM</p>
+                <div id="barrasDificultad">
+                    <div id="barra1" class="barra"></div>
+                    <div id="barra2" class="barra"></div>
+                    <div id="barra3" class="barra"></div>
+                    <div id="barra4" class="barra"></div>
+                </div>
+            </div>
+
+            <button id="btn_generarContrasena">Generate</button>
+        </div>
+        <p id="mensajeCopiar"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

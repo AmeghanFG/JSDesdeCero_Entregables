@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #060C18;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Se asegura que el body ocupe toda la altura de la ventana */
+}
+
+#contenedorGenerador {
+    width: 70%;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: cornflowerblue;
+}
+
+/* *Contenedor de la contraseña generada*/
+#contrasenaGenerada {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: black;
+    padding: 0.5em 0;
+    margin-bottom: 1rem;
+}
+
+#contrasenaGenerada p {
+    width: 75%;
+    font-size: 1rem;
+    padding: 0.7rem;
+}
+
+/* btn*/
+#contrasenaGenerada #btn_copiarContrasena {
+    display: flex;
+    justify-content: right;
+    width: 20%;
+    background-color: transparent;
+    border: none;
+}
+
+#contrasenaGenerada img {
+    max-width: 2rem;
+    margin-right: 1em;
+}
+
+/* *Contenedor de los parametros de la contraseña*/
+#parametrosContrasena {
+    background-color: black;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 50vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#parametrosContrasena form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#parametrosContrasena form label:first-child {
+    width: 60%;
+}
+
+#parametrosContrasena form p {
+    width: 40%;
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #9E00EB;
+    margin-bottom: 0.5em;
+}
+
+#parametrosContrasena form input[type="range"] {
+    width: 100%;
+    accent-color: #9E00EB;
+    margin-bottom: 1em;
+}
+
+  /* Estilo del label para que el texto quede alineado */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    width: 92%;
+    margin-bottom: 0.5em;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 0.5em;
+}
+
+/* Ocultar el checkbox original */
+.checkbox-container input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-color: transparent;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+  /* Cuadro al pasar el mouse */
+.checkbox-container input[type="checkbox"]:hover {
+    border-color: #9E00EB;
+}
+
+  /* Palomita */
+.checkbox-container input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: #9E00EB;
+    font-size: 16px;
+    position: absolute;
+    top: -0.2rem;
+    left: 0.2rem;
+}
+
+
+/* Contenedor de dificultad */
+#dificultad {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#dificultad p:first-child {
+    width: 35%;
+    text-align: left;
+    font-size: 1rem;
+}
+
+#dificultad p {
+    width: 35%;
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#dificultad #barrasDificultad {
+    width:30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+#dificultad #barrasDificultad .barra {
+    height: 2rem;
+    width: 1rem;
+    border: aliceblue solid 0.2em;
+    border-radius: 3px;
+}
+
+/* Botón de generar contraseña*/
+/* btn*/
+#btn_generarContrasena {
+    background-color: #9E00EB;
+    border-style: none;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+#mensajeCopiar {
+    color: #9E00EB;
+    text-align: center;
+}
