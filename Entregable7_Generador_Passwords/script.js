@@ -24,11 +24,17 @@ btn_generarContrasena.addEventListener('click', () => {
             barrasDificultad++;
         }
     }
+
+    // * Barras de dificultad
+    let barras = document.getElementsByClassName('barra');
+    // Limpiar barras 
+    for(let b1 = 0; b1 < barras.length; b1++) {
+        barras[b1].style = "background-color: trasparent; border: aliceblue solid 0.2em;;"
+        }
     
     // Rellenar barra según la dificultad
-    let barras = document.getElementsByClassName('barra');
-    for(let c = 0; c < barrasDificultad; c++) {
-        barras[c].style = "background-color: #9E00EB; border: #9E00EB solid 0.2em;"
+    for(let b2 = 0; b2 < barrasDificultad; b2++) {
+        barras[b2].style = "background-color: #9E00EB; border: #9E00EB solid 0.2em;"
     }
 
     // TODO: Generar contraseña
@@ -71,7 +77,10 @@ btn_generarContrasena.addEventListener('click', () => {
     Math.random() * 10;
     // Esto te dará un número decimal entre 0 y 10 (sin incluir 10).
     } */
-
+// Limpiar mensaje de error
+    if ((password.innerText != '')) {
+        mensajeCopiar.innerHTML = '';
+    }
 });
 
 // Botón para copiar la contraseña
@@ -87,6 +96,8 @@ btn_copiarContrasena.addEventListener('click', async () => {
     } else {
         // Copiar al portapapeles
         try {
+            // API de portapapeles
+            // navigator.clipboard.writeText(): Copia el texto proporcionado al portapapeles del sistema.
             await navigator.clipboard.writeText(passwordCopiada.innerText);
             mensajeCopiar.innerHTML = 'Contraseña copiada al portapapeles, se renovara en 3 segundos';
             passwordCopiada.style.color = 'white';
