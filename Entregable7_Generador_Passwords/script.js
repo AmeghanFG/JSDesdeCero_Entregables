@@ -31,6 +31,28 @@ btn_generarContrasena.addEventListener('click', () => {
     for(let b1 = 0; b1 < barras.length; b1++) {
         barras[b1].style = "background-color: trasparent; border: aliceblue solid 0.2em;;"
         }
+    // Limpiar mensaje de nivel
+    const level = document.getElementById('level');
+    level.innerHTML = '';
+
+    // Mostrar nivel de dificultad
+    switch (barrasDificultad) {
+        case 0:
+            level.innerHTML = 'Selecciona al menos un parámetro';
+            level.style.color = 'yellow';
+            break;
+        case 1:
+            level.innerHTML = 'Bajo';
+            break;
+        case 2:
+            level.innerHTML = 'Medio';
+            break;
+        case 3:
+            level.innerHTML = 'Alto';
+            break;
+        default:
+            level.innerHTML = 'Muy alto';
+    }
     
     // Rellenar barra según la dificultad
     for(let b2 = 0; b2 < barrasDificultad; b2++) {
@@ -118,5 +140,8 @@ btn_copiarContrasena.addEventListener('click', async () => {
         for(let c = 0; c < barras.length; c++) {
         barras[c].style = "background-color: trasparent; border: aliceblue solid 0.2em;;"
         }
+    // Limpiar el nivel de dificultad
+    const level = document.getElementById('level');
+    level.innerHTML = 'LEVEL';
     }, 3000);
 });
